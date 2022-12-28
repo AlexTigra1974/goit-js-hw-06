@@ -5,10 +5,9 @@ form.addEventListener("submit", onLogin);
 function onLogin(event) {
   event.preventDefault();
 
-  const { email, password } = event.currentTarget.elements;
+  const { email, password } = event.currentTarget;
   if (!email.value || !password.value) {
     alert("Всі поля повинні бути заповнені!");
   }
-  password.value = "";
-  email.value = "";
+  event.currentTarget.reset();
 }
