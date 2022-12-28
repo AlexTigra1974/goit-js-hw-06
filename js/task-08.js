@@ -9,8 +9,6 @@ function onLogin(event) {
   if (!email.value || !password.value) {
     alert("Всі поля повинні бути заповнені!");
   }
+  password.value = "";
+  email.value = "";
 }
-// const object = {
-//   email,
-//   password,
-// };
